@@ -1,0 +1,1 @@
+!function(e){"use strict";e("#summernote").summernote({placeholder:"متن پیام!",tabsize:1,height:300}),e("#summernote2").summernote({placeholder:"Hello World!",tabsize:1,height:600})}(jQuery);

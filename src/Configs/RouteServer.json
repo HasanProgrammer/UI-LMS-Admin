@@ -1,0 +1,56 @@
+{
+  "Root"                  : "https://localhost:5001"              ,
+
+  "AllCategory"           : "/api/v1.0/admin/category"            ,
+  "AllCategoryNoPaginate" : "/api/v1.0/category/all"              ,
+  "CreateCategory"        : "/api/v1.0/admin/category/create"     ,
+  "EditCategory"          : "/api/v1.0/admin/category/edit/"      ,
+  "DeleteCategory"        : "/api/v1.0/admin/category/delete/"    ,
+  "ActiveCategory"        : "/api/v1.0/admin/category/active/"    ,
+  "InActiveCategory"      : "/api/v1.0/admin/category/inactive/"  ,
+
+  "AllTerm"               : "/api/v1.0/term"                      ,
+  "AllTermNoPaginate"     : "/api/v1.0/term/all"                  ,
+  "CreateTerm"            : "/api/v1.0/term/create"               ,
+  "EditTerm"              : "/api/v1.0/term/edit/"                ,
+  "ActiveTerm"            : "/api/v1.0/term/active/"              ,
+  "InActiveTerm"          : "/api/v1.0/term/inactive/"            ,
+  "DeleteTerm"            : "/api/v1.0/term/delete/"              ,
+
+  "AllChapter"            : "/api/v1.0/chapter"                   ,
+  "AllChapterNoPaginate"  : "/api/v1.0/chapter/all/"              ,
+  "CreateChapter"         : "/api/v1.0/chapter/create"            ,
+  "EditChapter"           : "/api/v1.0/chapter/edit/"             ,
+  "DeleteChapter"         : "/api/v1.0/chapter/delete/"           ,
+
+  "AllVideo"              : "/api/v1.0/video"                     ,
+  "CreateVideo"           : "/api/v1.0/video/create"              ,
+  "EditVideo"             : "/api/v1.0/video/edit/"               ,
+  "ActiveVideo"           : "/api/v1.0/video/active/"             ,
+  "InActiveVideo"         : "/api/v1.0/video/inactive/"           ,
+  "DeleteVideo"           : "/api/v1.0/video/delete/"             ,
+
+  "AllQuestion"           : "/api/v1.0/question"                  ,
+  "ActiveQuestion"        : "/api/v1.0/question/active/"          ,
+  "InActiveQuestion"      : "/api/v1.0/question/inactive/"        ,
+
+  "AllAnswer"             : "/api/v1.0/answer/"                   ,
+  "CreateAnswer"          : "/api/v1.0/answer/answer/"            ,
+  "EditAnswer"            : "/api/v1.0/answer/answer/edit/"       ,
+  "ActiveAnswer"          : "/api/v1.0/answer/active/"            ,
+  "InActiveAnswer"        : "/api/v1.0/answer/inactive/"          ,
+
+  "AllTransaction"        : "/api/v1.0/transaction"               ,
+
+  "AllUser"               : "/api/v2.0/admin/user"                ,
+  "CreateUser"            : "/api/v2.0/admin/user/create"         ,
+  "EditUser"              : "/api/v2.0/admin/user/edit/"          ,
+  "ActiveUser"            : "/api/v2.0/admin/user/active/"        ,
+  "InActiveUser"          : "/api/v2.0/admin/user/inactive/"      ,
+  "DeleteUser"            : "/api/v2.0/admin/user/delete/"        ,
+
+  "AllRole"               : "/api/v1.0/admin/role"                ,
+  "CreateRole"            : "/api/v1.0/admin/role/create"         ,
+
+  "Login"                 : "/api/v1.0/admin/auth/login"
+}

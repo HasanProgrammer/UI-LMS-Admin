@@ -1,0 +1,210 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+.hasan-file-input, .hasan-video-input
+{
+    outline: none !important;
+    border: none !important;
+    overflow: hidden;
+}
+
+.hasan-file-input::-webkit-file-upload-button, .hasan-video-input::-webkit-file-upload-button
+{
+    visibility: hidden;
+}
+
+.hasan-file-input::before
+{
+    content: 'یک تصویر شاخص را انتخاب نمایید';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 0 !important;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.hasan-video-input::before
+{
+    content: 'یک فیلم برنامه نویسی را انتخاب نمایید';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 0 !important;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.hasan-file-input:hover::before, .hasan-video-input:hover::before
+{
+    border-color: black;
+}
+
+.hasan-file-input:active::before, .hasan-video-input:active::before
+{
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+.search-box-root-page
+{
+    border: 0 !important;
+    border-radius: 0 !important;
+    opacity: 0.9;
+}
+
+.cell
+{
+    text-align: center !important;
+    vertical-align: center !important;
+    justify-content: center !important;
+    cursor: default !important;
+}
+
+.modal
+{
+    width: 30% !important;
+    height: 50% !important;
+}
+
+.pagination
+{
+    padding: 1em !important;
+    border-radius: 0 !important;
+}
+
+.pagination li
+{
+    margin: 0.5em 0.5em !important;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.pagination .active
+{
+    background-color: lightgrey !important;
+}
+
+.pagination li a
+{
+    display: block;
+    width: 3em !important;
+    height: 3em !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    vertical-align: center !important;
+    padding-top: 0.5em !important;
+}
+
+.fontIR
+{
+    font-family: IRANSans !important;
+    font-weight: normal;
+    cursor: default !important;
+}
+
+.softCard
+{
+    border-radius: 0px !important;
+    margin-top: 30px;
+    overflow: unset !important;
+}
+
+.customHR
+{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.customCell
+{
+    vertical-align: middle !important;
+    padding: 10px !important;
+    font-weight: normal !important;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/*Sweet Alert's Style*/
+.swal-modal
+{
+    border-radius: 0px !important;
+    text-align: center;
+}
+
+.swal-text
+{
+    text-align: center;
+    padding-right: 22px;
+    padding-left: 22px;
+    cursor: default;
+}
+
+.swal-button
+{
+    border-radius: 0px !important;
+    padding: 7px 19px;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none !important;
+    border: 0px !important;
+}
+
+.swal-button:focus
+{
+    box-shadow: none;
+}
+
+.swal-footer
+{
+    text-align: center;
+    direction: ltr;
+}
+
+/*Button's Delete*/
+.action_button
+{
+    font-weight: normal !important;
+    width: 12em !important;
+    border-radius: 0 !important;
+    padding: 0.5em !important;
+    box-shadow: 0 0 0 0 !important;
+    font-size: 15px !important;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/*Custom's Style Template*/
+.background-image-body
+{
+    width: 100% !important;
+    height: 100% !important;
+    background-attachment: unset !important;
+}
+
+.image-thumb
+{
+    width: 5em !important;
+    height: 5em !important;
+    border-radius: 0 !important;
+}

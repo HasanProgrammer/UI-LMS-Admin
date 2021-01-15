@@ -1,0 +1,37 @@
+{
+  "HomePage"               : "/dashboard"              ,
+
+  "AllCategoryPage"        : "/category/all"           ,
+  "CreateCategoryPage"     : "/category/create"        ,
+  "EditCategoryPage"       : "/category/edit/:id"      ,
+
+  "AllTermPage"            : "/term/all"               ,
+  "CreateTermPage"         : "/term/create"            ,
+  "EditTermPage"           : "/term/edit/:id"          ,
+
+  "AllChapterPage"         : "/chapter/all"            ,
+  "CreateChapterPage"      : "/chapter/create"         ,
+  "EditChapterPage"        : "/chapter/edit/:id"       ,
+
+  "AllVideoPage"           : "/video/all"              ,
+  "CreateVideoPage"        : "/video/create"           ,
+  "EditVideoPage"          : "/video/edit/:id"         ,
+
+  "AllQuestionPage"        : "/question/all"           ,
+
+  "AllAnswerPage"          : "/answer/all/:id"         ,
+  "CreateAnswerPage"       : "/answer/create/:id"      ,
+  "EditAnswerPage"         : "/answer/edit/:id"        ,
+
+  "AllTransactionPage"     : "/transaction/all"        ,
+
+  "AllRolePage"            : "/role/all"               ,
+  "CreateRolePage"         : "/role/create"            ,
+  "EditRolePage"           : "/role/edit/:id"          ,
+
+  "AllUserPage"            : "/user/all"               ,
+  "CreateUserPage"         : "/user/create"            ,
+  "EditUserPage"           : "/user/edit/:id"          ,
+
+  "LoginPage"              : "/login"
+}
