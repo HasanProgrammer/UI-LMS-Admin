@@ -180,7 +180,7 @@ class IndexPage extends React.Component
                                                                     "ندارد"
                                                                     :
                                                                     (
-                                                                        <img className="img-thumbnail image-thumb" src={`${RouteServer.Root + "/" + answer.userImage}`} alt=""/>
+                                                                        <img className="image-thumb" src={`${RouteServer.Root + "/" + answer.userImage}`} alt=""/>
                                                                     )
                                                                 }
                                                             </td>

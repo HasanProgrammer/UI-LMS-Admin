@@ -38,6 +38,8 @@ class EditPage extends React.Component
         Categories   : [],
         Category     : null,
         Price        : null,
+        DateStart    : null,
+        DateEnd      : null,
         Suitable     : null,
         Result       : null,
         HasChapter   : 0
@@ -57,7 +59,6 @@ class EditPage extends React.Component
      */
     async componentDidMount()
     {
-
         let Configs = {
             headers : {
                 "Authorization": `${"Bearer " + localStorage.getItem("Token")}`
@@ -66,7 +67,7 @@ class EditPage extends React.Component
 
         let term = JSON.parse(localStorage.getItem("term"));
 
-        await Axios.get(`${RouteServer.Root + RouteServer.AllCategory}`, Configs).then(response => {
+        await Axios.get(`${RouteServer.Root + RouteServer.AllCategoryNoPaginate}`, Configs).then(response => {
 
             this.setState({
                 Id           : term?.id,
@@ -77,6 +78,8 @@ class EditPage extends React.Component
                 Categories   : response?.data?.body?.categories,
                 Price        : term?.price,
                 Suitable     : term?.suitable,
+                DateStart    : term?.dateStart,
+                DateEnd      : term?.dateEnd === "در حال برگزاری" ? null : term?.dateEnd,
                 Result       : term?.result,
                 HasChapter   : term?.hasChapterKey
             });
@@ -133,6 +136,32 @@ class EditPage extends React.Component
                                                           value={this.state.Description}
                                                           onChange={this.setDescription}
                                                 />
+                                                </div>
+                                            </div>
+
+                                            <div className="form-group row mb-4">
+                                                <label className="col-form-label text-md-right col-12 col-md-3 col-lg-3"> تاریخ شروع دوره {" "} <span className="text-danger">*</span></label>
+                                                <div className="col-sm-12 col-md-7" style={{borderRadius: "0"}}>
+                                                    <input placeholder="تاریخ شروع دوره خود را وارد نمایید ، سعی نمایید تاریخ را به شکل ( yyyy/mm/dd ) بیان نمایید"
+                                                           type="text"
+                                                           className="form-control"
+                                                           style={{borderRadius: "0"}}
+                                                           onChange={this.setDateStart}
+                                                           value={this.state.DateStart}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="form-group row mb-4">
+                                                <label className="col-form-label text-md-right col-12 col-md-3 col-lg-3"> تاریخ پایان دوره {" "} <span className="text-danger">*</span></label>
+                                                <div className="col-sm-12 col-md-7" style={{borderRadius: "0"}}>
+                                                    <input placeholder="تاریخ پایان دوره خود را وارد نمایید ، تاریخ را به شکل ( yyyy/mm/dd ) بیان نمایید"
+                                                           type="text"
+                                                           className="form-control"
+                                                           style={{borderRadius: "0"}}
+                                                           onChange={this.setDateEnd}
+                                                           value={this.state.DateEnd}
+                                                    />
                                                 </div>
                                             </div>
 
@@ -291,6 +320,26 @@ class EditPage extends React.Component
     };
 
     /**
+     * @function setDateStart
+     */
+    setDateStart = (event) =>
+    {
+        this.setState({
+            DateStart : event.target.value
+        });
+    };
+
+    /**
+     * @function setDateEnd
+     */
+    setDateEnd = (event) =>
+    {
+        this.setState({
+            DateEnd : event.target.value
+        });
+    };
+
+    /**
      * @function setSuitable
      */
     setSuitable = (event) =>
@@ -340,6 +389,8 @@ class EditPage extends React.Component
         if(this.state.Result      != null) formData.append("Result"      , this.state.Result);
         if(this.state.Price       != null) formData.append("Price"       , this.state.Price);
         if(this.state.Category    != null) formData.append("Category"    , this.state.Category);
+        if(this.state.DateStart   != null) formData.append("DateStart"   , this.state.DateStart);
+        if(this.state.DateEnd     != null) formData.append("DateEnd"     , this.state.DateEnd);
         if(this.state.HasChapter  != null) formData.append("HasChapter"  , this.state.HasChapter);
         if(this.state.Image       != null) formData.append("image"       , this.state.Image);
 

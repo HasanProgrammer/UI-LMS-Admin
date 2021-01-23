@@ -16,7 +16,12 @@ import RouteServer from "./../../Configs/RouteServer";
 
 //Plugins
 import Axios from "axios";
+
 import { toast as Toast } from "react-toastify";
+
+/*-------------------------------------------------------------------*/
+
+//Styles
 
 /*-------------------------------------------------------------------*/
 
@@ -37,6 +42,8 @@ class CreatePage extends React.Component
         Categories   : [],
         Category     : null,
         Price        : null,
+        DateStart    : null,
+        DateEnd      : null,
         Suitable     : null,
         Result       : null,
         HasChapter   : 0
@@ -121,6 +128,30 @@ class CreatePage extends React.Component
                                             </div>
 
                                             <div className="form-group row mb-4">
+                                                <label className="col-form-label text-md-right col-12 col-md-3 col-lg-3"> تاریخ شروع دوره {" "} <span className="text-danger">*</span></label>
+                                                <div className="col-sm-12 col-md-7" style={{borderRadius: "0"}}>
+                                                    <input placeholder="تاریخ شروع دوره خود را وارد نمایید ، تاریخ را به شکل ( yyyy/mm/dd ) بیان نمایید"
+                                                           type="text"
+                                                           className="form-control"
+                                                           style={{borderRadius: "0"}}
+                                                           onChange={this.setDateStart}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="form-group row mb-4">
+                                                <label className="col-form-label text-md-right col-12 col-md-3 col-lg-3"> تاریخ پایان دوره {" "} <span className="text-danger">*</span></label>
+                                                <div className="col-sm-12 col-md-7" style={{borderRadius: "0"}}>
+                                                    <input placeholder="تاریخ پایان دوره خود را وارد نمایید ، تاریخ را به شکل ( yyyy/mm/dd ) بیان نمایید"
+                                                           type="text"
+                                                           className="form-control"
+                                                           style={{borderRadius: "0"}}
+                                                           onChange={this.setDateEnd}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="form-group row mb-4">
                                                 <label className="col-form-label text-md-right col-12 col-md-3 col-lg-3"> مناسب برای {" "} <span className="text-danger">*</span></label>
                                                 <div className="col-sm-12 col-md-7" style={{borderRadius: "0"}}>
                                                 <textarea placeholder="در این قسمت ، درباره مناسب بودن دوره برای افراد مختلف ، توضیحاتی را ذکر نمایید ( این دوره برای چه افرادی مناسب است )"
@@ -143,7 +174,7 @@ class CreatePage extends React.Component
                                             <div className="form-group row mb-4">
                                                 <label className="col-form-label text-md-right col-12 col-md-3 col-lg-3"> قیمت دوره {" "} <span className="text-danger">*</span></label>
                                                 <div className="col-sm-12 col-md-7" style={{borderRadius: "0"}}>
-                                                    <input placeholder="قیمت دوره خود را به ریال وارد نمایید . در نظر داشته باشید ، عدد 0 به منزله رایگان بودن دوره می باشد" type="text" className="form-control" style={{borderRadius: "0"}} onChange={this.setPrice}/>
+                                                    <input placeholder="قیمت دوره خود را وارد نمایید . در نظر داشته باشید قیمت وارده به تومان می باشد" type="text" className="form-control" style={{borderRadius: "0"}} onChange={this.setPrice}/>
                                                 </div>
                                             </div>
 
@@ -274,6 +305,26 @@ class CreatePage extends React.Component
     };
 
     /**
+     * @function setDateStart
+     */
+    setDateStart = (event) =>
+    {
+        this.setState({
+            DateStart : event.target.value
+        });
+    };
+
+    /**
+     * @function setDateEnd
+     */
+    setDateEnd = (event) =>
+    {
+        this.setState({
+            DateEnd : event.target.value
+        });
+    };
+
+    /**
      * @function setSuitable
      */
     setSuitable = (event) =>
@@ -323,6 +374,8 @@ class CreatePage extends React.Component
         if(this.state.Result      != null) formData.append("Result"      , this.state.Result);
         if(this.state.Price       != null) formData.append("Price"       , this.state.Price);
         if(this.state.Category    != null) formData.append("Category"    , this.state.Category);
+        if(this.state.DateStart   != null) formData.append("DateStart"   , this.state.DateStart);
+        if(this.state.DateEnd     != null) formData.append("DateEnd"     , this.state.DateEnd);
         if(this.state.HasChapter  != null) formData.append("HasChapter"  , this.state.HasChapter);
 
         formData.append("image" , this.state.Image);

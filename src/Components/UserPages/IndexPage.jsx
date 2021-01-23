@@ -221,6 +221,8 @@ class IndexPage extends React.Component
                                                                         <button id={user.id} onClick={this.onClickActiveButton} className="btn btn-success action_button" style={{borderRadius: "0", }}>فعال</button>
                                                                     )
                                                                 }
+                                                                <br/>
+                                                                <br/>
                                                             </td>
                                                         </tr>
                                                     ))

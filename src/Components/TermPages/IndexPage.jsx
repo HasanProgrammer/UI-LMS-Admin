@@ -19,6 +19,7 @@ import PaginationConfig from "./../../Configs/Pagination.json";
 import swal          from "sweetalert";
 import Axios         from "axios";
 import ReactPaginate from "react-paginate";
+import EllipsisText  from "react-ellipsis-text";
 
 import { toast as Toast } from "react-toastify";
 
@@ -152,6 +153,8 @@ class IndexPage extends React.Component
                                                     <th className="cell">قیمت</th>
                                                     <th className="cell">دسته بندی</th>
                                                     <th className="cell">فصل بندی</th>
+                                                    <th className="cell">شروع دوره</th>
+                                                    <th className="cell">پایان دوره</th>
                                                     <th className="cell">وضعیت</th>
                                                     {/*<th className="cell">تصویر</th>*/}
                                                     <th className="cell">عملیات</th>
@@ -161,12 +164,14 @@ class IndexPage extends React.Component
                                                         <tr>
                                                             <td className="cell">{( index + 1)}</td>
                                                             <td className="cell">{term.name}</td>
-                                                            <td className="cell">{term.description}</td>
-                                                            <td className="cell">{term.suitable}</td>
-                                                            <td className="cell">{term.result}</td>
+                                                            <td className="cell"><EllipsisText text={term.description} length={50}/></td>
+                                                            <td className="cell"><EllipsisText text={term.suitable} length={50}/></td>
+                                                            <td className="cell"><EllipsisText text={term.result} length={50}/></td>
                                                             <td className="cell">{term.price}</td>
                                                             <td className="cell">{term.categoryName}</td>
                                                             <td className="cell">{term.hasChapterValue}</td>
+                                                            <td className="cell">{term.dateStart}</td>
+                                                            <td className="cell">{term.dateEnd}</td>
                                                             <td className="cell">{term.statusValue}</td>
                                                             {/*<td className="cell">*/}
                                                             {/*    <img className="img-thumbnail image-thumb" src={`${RouteServer.Root + "/" + term.image}`} alt=""/>*/}
