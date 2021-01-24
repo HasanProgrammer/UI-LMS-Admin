@@ -1,5 +1,5 @@
 {
-  "Root"                  : "https://localhost:5001"              ,
+  "Root"                  : "http://localhost:5000"               ,
 
   "AllCategory"           : "/api/v1.0/admin/category"            ,
   "AllCategoryNoPaginate" : "/api/v1.0/category/all"              ,
